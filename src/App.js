@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     const allTweetsSorage = localStorage.getItem(TWEETS_STORAGE);
-    const allTweetsArray = JSON.parse(allTweetsSorage);
+    const allTweetsArray = JSON.parse(allTweetsSorage) || [];
     setAllTweets(allTweetsArray);
     setReloadTweets(false);
   }, [reloadTweets]);
